@@ -494,7 +494,7 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * 
 	 * Method that will add a subscriber
 	 * 
-	 * 
+	 *
 	 */
 
 	public void subscribe( LaneObserver adding ) {
