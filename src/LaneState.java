@@ -19,7 +19,7 @@ public abstract class LaneState {
     }
 
 
-    private int getScore( Bowler Cur, int frame) {
+    public int getScore( Bowler Cur, int frame) {
         int[] curScore;
         int strikeballs = 0;
         int totalScore = 0;

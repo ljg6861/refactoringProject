@@ -456,7 +456,7 @@ public class Lane extends Thread implements PinsetterObserver {
 		for (int i = 0; i != 10; i++){
 			cumulScores[bowlIndex][i] = 0;
 		}
-		LaneState s;
+		LaneState s = new LaneRegularState(this);
 		int current = 2*(frame - 1)+ball-1;
 		//Iterate through each ball until the current one.
 		for (int i = 0; i != current+2; i++) {
@@ -469,7 +469,7 @@ public class Lane extends Thread implements PinsetterObserver {
 				s = new LaneRegularState(this);
 			}
 		}
-		return totalScore;
+		return s.getScore(Cur, frame);
 	}
 
 	/** isPartyAssigned()
@@ -494,7 +494,7 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * 
 	 * Method that will add a subscriber
 	 * 
-	 * @param subscribe	Observer that is to be added
+	 * 
 	 */
 
 	public void subscribe( LaneObserver adding ) {
