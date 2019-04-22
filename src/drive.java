@@ -15,8 +15,5 @@ public class drive {
 		controlDesk.subscribe( cdv );
 
 	}
-
-	public ControlDesk getControlDesk() {
-		return controlDesk;
-	}
+	
 }
